@@ -1,0 +1,9 @@
+youtrack-plugin.hpi:latest
+credentials.hpi:latest
+ssh-credentials.hpi:latest
+git-client.hpi:latest
+scm-api.hpi:latest
+git.hpi:latest
+bitbucket.hpi:latest
+mercurial.hpi:latest
+gradle.hpi:latest
