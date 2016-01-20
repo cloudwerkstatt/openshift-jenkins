@@ -18,11 +18,17 @@ RUN yum -y update \
 
 RUN mkdir -p $JENKINS_HOME/plugins \
     && cd $JENKINS_HOME/plugins \
-    && curl -sSLO https://updates.jenkins-ci.org/latest/youtrack-plugin.hpi \
-    && curl -sSLO https://updates.jenkins-ci.org/latest/gradle.hpi
+    && curl -sSLO ${JENKINS_UC}/latest/youtrack-plugin.hpi \
+    && curl -sSLO ${JENKINS_UC}/latest/gradle.hpi
+
+RUN chmod -R 777 /var
 
 VOLUME /var/jenkins_home
 
 EXPOSE 8080 50000
 
 CMD java -jar /usr/share/jenkins/jenkins.war
+
+
+RUN useradd default
+USER default
