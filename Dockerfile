@@ -25,6 +25,7 @@ RUN mkdir -p $JENKINS_HOME/plugins \
     && curl -sSLO ${JENKINS_UC}/latest/scm-api.hpi \
     && curl -sSLO ${JENKINS_UC}/latest/git.hpi \
     && curl -sSLO ${JENKINS_UC}/latest/bitbucket.hpi \
+    && curl -sSLO ${JENKINS_UC}/latest/mercurial.hpi \
     && curl -sSLO ${JENKINS_UC}/latest/gradle.hpi
 
 RUN chmod -R 777 /var
