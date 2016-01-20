@@ -19,6 +19,12 @@ RUN yum -y update \
 RUN mkdir -p $JENKINS_HOME/plugins \
     && cd $JENKINS_HOME/plugins \
     && curl -sSLO ${JENKINS_UC}/latest/youtrack-plugin.hpi \
+    && curl -sSLO ${JENKINS_UC}/latest/credentials.hpi \
+    && curl -sSLO ${JENKINS_UC}/latest/ssh-credentials.hpi \
+    && curl -sSLO ${JENKINS_UC}/latest/git-client.hpi \
+    && curl -sSLO ${JENKINS_UC}/latest/scm-api.hpi \
+    && curl -sSLO ${JENKINS_UC}/latest/git.hpi \
+    && curl -sSLO ${JENKINS_UC}/latest/bitbucket.hpi \
     && curl -sSLO ${JENKINS_UC}/latest/gradle.hpi
 
 RUN chmod -R 777 /var
