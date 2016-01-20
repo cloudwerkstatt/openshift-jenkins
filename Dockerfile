@@ -10,7 +10,7 @@ ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000
 
 RUN yum -y update \
-    && yum -y install java-1.8.0-openjdk-devel \
+    && yum -y install java-1.8.0-openjdk-devel git \
     && mkdir -p /usr/share/jenkins \
     && curl -fL http://mirrors.jenkins-ci.org/war/${JENKINS_VERSION}/jenkins.war -o /usr/share/jenkins/jenkins.war \
     && echo "$JENKINS_SHA /usr/share/jenkins/jenkins.war" | sha1sum -c - \
