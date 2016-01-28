@@ -5,5 +5,7 @@ git-client:latest
 scm-api:latest
 git:latest
 bitbucket:latest
+bitbucket-build-status-notifier:latest
+bitbucket-oauth:latest
 mercurial:latest
 gradle:latest
