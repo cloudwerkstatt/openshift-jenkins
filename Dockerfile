@@ -6,6 +6,8 @@ USER root
 RUN echo 7.2 > /etc/yum/vars/releasever
 RUN yum -y update \
     && yum -y install java-1.8.0-openjdk-devel git \
+    && curl --silent --location https://rpm.nodesource.com/setup_5.x | bash - \
+    && yum -y install nodejs gcc-c++ make \
     && yum clean all
 
 USER 1001 
