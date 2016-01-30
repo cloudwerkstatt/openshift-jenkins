@@ -10,6 +10,8 @@ RUN yum -y update \
     && yum -y install nodejs bzip2 gcc-c++ make \
     && yum clean all
 
+RUN npm install -g bower grunt-cli
+
 USER 1001 
 COPY plugins.txt /opt/openshift/configuration/plugins.txt
 RUN /usr/local/bin/plugins.sh /opt/openshift/configuration/plugins.txt
